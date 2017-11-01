@@ -1,0 +1,157 @@
+https://codility.com/programmers/lessons/6-sorting/triangle/
+https://codility.com/demo/results/trainingW6VUJ2-X26/
+
+A zero-indexed array A consisting of N integers is given. A triplet (P, Q, R) is triangular if 0 ≤ P < Q < R < N and:
+
+        A[P] + A[Q] > A[R],
+        A[Q] + A[R] > A[P],
+        A[R] + A[P] > A[Q].
+
+For example, consider array A such that:
+* A[0] = 10
+  A[1] = 2
+* A[2] = 5
+  A[3] = 1
+* A[4] = 8
+  A[5] = 20
+
+Triplet (0, 2, 4) is triangular.
+
+Write a function:
+
+    class Solution { public int solution(int[] A); }
+
+that, given a zero-indexed array A consisting of N integers, returns 1 if there exists a triangular triplet for this array and returns 0 otherwise.
+
+For example, given array A such that:
+  A[0] = 10
+  A[1] = 2
+  A[2] = 5
+  A[3] = 1
+  A[4] = 8
+  A[5] = 20
+
+the function should return 1, as explained above. Given array A such that:
+  A[0] = 10
+  A[1] = 50
+  A[2] = 5
+  A[3] = 1
+
+the function should return 0.
+
+Assume that:
+
+        N is an integer within the range [0..100,000];
+        each element of array A is an integer within the range [−2,147,483,648..2,147,483,647].
+
+Complexity:
+
+        expected worst-case time complexity is O(N*log(N));
+        expected worst-case space complexity is O(N), beyond input storage (not counting the storage required for input arguments).
+
+Elements of input arrays can be modified.
+Copyright 2009–2017 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.
+
+########################################################################################################################
+A triplet (P, Q, R) is triangular if 0 ≤ P < Q < R < N and:
+         A[P] + A[Q] > A[R]
+         A[Q] + A[R] > A[P]
+         A[R] + A[P] > A[Q]
+returns 1 if there exists a triangular triplet for this array and returns 0 otherwise.
+
+Example 1
+---------
+  A[0] = 10
+  A[1] = 2
+  A[2] = 5
+  A[3] = 1
+  A[4] = 8
+  A[5] = 20
+
+(0, 1, 2), (0, 1, 3), (0, 1, 4), (0, 1, 5),
+(0, 2, 3), (0, 2, 4), (0, 2, 5)
+(0, 3, 4), (0, 3, 5)
+(0, 4, 5)
+
+(1, 2, 3), (1, 2, 4), (1, 2, 5)
+(1, 3, 4), (1, 3, 5)
+(1, 4, 5)
+
+(2, 3, 4), (2, 3, 5)
+(2, 4, 5)
+
+(3, 4, 5)
+
+Triplet (0, 2, 4) is triangular, the function should return 1
+         A[P] + A[Q] > A[R]
+         A[Q] + A[R] > A[P]
+         A[R] + A[P] > A[Q]
+A[P]:10
+A[Q]:5
+A[R]:8
+         10 +  5 >  8 = true
+          5 +  8 > 10 = true
+          8 + 10 >  5 = true
+
+
+Example 2
+---------
+  A[0] = 10
+  A[1] = 50
+  A[2] = 5
+  A[3] = 1
+
+(0, 1, 2), (0, 1, 3)
+           10 + 50 >  5 = false         10 + 50 >  1 = false
+           50 +  5 > 10 = false         50 +  1 > 10 = false
+            5 + 10 > 50 = false          1 + 10 > 50 = false
+(0, 2, 3)
+           10 +  2 >  1 = false
+            2 +  1 > 10 = false
+            1 + 10 >  2 = false
+
+(1, 2, 3)
+           50 +  5 > 1  = false
+            5 +  1 > 50 = false
+            1 + 50 > 5  = false
+
+The function should return 0.
+
+
+Example 2 (Sorted)
+---------
+  A[0] = 1
+  A[1] = 5
+  A[2] = 10
+  A[3] = 50
+
+(0, 1, 2)
+    A[P]:1
+    A[Q]:5
+    A[R]:10
+          1 +  5 > 10 = false
+          5 + 10 > 1  = true
+         10 +  1 > 5  = true
+(0, 1, 3)
+    A[P]:1
+    A[Q]:5
+    A[R]:50
+          1 +  5 > 50 = false
+          5 + 50 > 1  = true
+         50 +  1 > 5  = true
+(0, 2, 3)
+    A[P]:1
+    A[Q]:10
+    A[R]:50
+          1 + 10 > 50 = false
+         10 + 50 > 1  = true
+         50 +  1 > 10 = true
+
+(1, 2, 3)
+    A[P]:5
+    A[Q]:10
+    A[R]:50
+          5 + 10 > 50 = false
+         10 + 50 > 5  = true
+         50 +  5 > 10 = true
+
