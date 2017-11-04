@@ -20,6 +20,9 @@
         <module>lesson-009-maximum-slice</module>
         <module>lesson-010-prime-composite</module>
         <module>lesson-011-sieve-eratosthenes</module>
+        <module>lesson-012-euclidean-algorithm</module>
+    <module>lesson-013-fibonacci-numbers</module>
+    <module>lesson-014-binary-search</module>
   </modules> 
 
     <properties>
