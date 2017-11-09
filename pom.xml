@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0                              http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0                              http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>codility</groupId>
@@ -7,7 +8,7 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>Codility Lessons</name>
-       
+
     <modules>
         <module>lesson-001-iterations</module>
         <module>lesson-002-arrays</module>
@@ -21,9 +22,12 @@
         <module>lesson-010-prime-composite</module>
         <module>lesson-011-sieve-eratosthenes</module>
         <module>lesson-012-euclidean-algorithm</module>
-    <module>lesson-013-fibonacci-numbers</module>
-    <module>lesson-014-binary-search</module>
-  </modules> 
+        <module>lesson-013-fibonacci-numbers</module>
+        <module>lesson-014-binary-search</module>
+        <module>lesson-015-caterpillar-method</module>
+        <module>lesson-016-greedy-algorithms</module>
+        <module>lesson-017-dynamic-programming</module>
+    </modules>
 
     <properties>
         <maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
@@ -33,7 +37,7 @@
         <logback.version>1.2.3</logback.version>
         <junit.version>4.11</junit.version>
     </properties>
-    
+
     <build>
         <pluginManagement>
             <plugins>
