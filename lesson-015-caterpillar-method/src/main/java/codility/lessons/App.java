@@ -4,6 +4,7 @@ public class App {
 
     /**
      * Let’s check whether a sequence contains a contiguous subse-quence whose sum of elements equals s.
+     * For example, in the following sequence we are looking for a subsequence whose total equals s = 12.
      *
      * @param arr
      * @param sum
