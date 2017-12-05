@@ -2,22 +2,18 @@ package codility.lessons;
 
 public class MissingInteger {
 
-    public int solution(int[] arr) {
-        boolean[] setPos = new boolean[1000000+1];
-        int max = Integer.MIN_VALUE;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > 0) {
-                setPos[arr[i]] = true;
-                if (arr[i] > max) {
-                    max = arr[i];
-                }
+    public int solution(int[] a) {
+        boolean[] counters = new boolean[a.length];
+        for (int i=0; i < a.length; i++) {
+            if (a[i] > 0 && a[i] <= counters.length) {
+                counters[a[i]-1] = true;
             }
         }
-        int i = 1;
-        while (i <= max && setPos[i]) {
+        int i = 0;
+        while (i < counters.length && counters[i]) {
             i++;
         }
-        return i;
+        return i + 1;
     }
 
 }

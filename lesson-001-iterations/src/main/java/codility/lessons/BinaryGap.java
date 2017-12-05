@@ -23,9 +23,7 @@ public class BinaryGap {
         int count = 0;
         while (nro > 0) {
             if ((nro & 1) == 1) {
-                if (count > max) {
-                    max = count;
-                }
+                max = Math.max(max, count);
                 count = 0;
             } else {
                 if (max > -1) {
@@ -36,4 +34,5 @@ public class BinaryGap {
         }
         return max == -1 ? 0 : max;
     }
+
 }

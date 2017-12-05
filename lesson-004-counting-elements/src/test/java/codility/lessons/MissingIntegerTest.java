@@ -17,8 +17,8 @@ public class MissingIntegerTest {
         assertEquals(1, app.solution(new int[]{0}));
         assertEquals(5, app.solution(new int[]{1, 3, 6, 4, 1, 2}));
         assertEquals(4, app.solution(new int[]{1, 3, 2}));
-        assertEquals(1, app.solution(new int[]{2,3}));
-        assertEquals(3, app.solution(new int[]{1,2}));
+        assertEquals(1, app.solution(new int[]{2, 3}));
+        assertEquals(3, app.solution(new int[]{1, 2}));
         assertEquals(3, app.solution(new int[]{4, 1, 5, 6, 2}));
         assertEquals(1, app.solution(new int[]{-1, -3}));
         assertEquals(1, app.solution(new int[]{-1}));

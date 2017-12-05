@@ -25,4 +25,8 @@ public class FrogJmp {
         return (xi + (jumps * jlen) >= xf) ? jumps : jumps + 1;
     }
 
+    public int solution4(int x, int y, int d) {
+        return (int) Math.ceil((double)(y - x) / d);
+    }
+
 }

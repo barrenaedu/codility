@@ -34,4 +34,11 @@ public class FrogJmpTest {
         assertEquals(474799482, app.solution3(1, 949598964, 2));
     }
 
+    @Test
+    public void testSolution4() {
+        assertEquals(3, app.solution4(10, 85, 30));
+        assertEquals(2, app.solution4(1, 5, 2));
+        assertEquals(474799482, app.solution4(1, 949598964, 2));
+    }
+
 }

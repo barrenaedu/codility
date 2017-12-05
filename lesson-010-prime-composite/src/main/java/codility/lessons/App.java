@@ -13,8 +13,9 @@ public class App {
           if (n % i == 0) {
               result += 2;
           }
-          i++;     // 1, 4, 9, 18
+          i++;
         }
+        // 0, 1, 4, 9
         if (i * i == n) {
             result++;
         }
@@ -30,6 +31,16 @@ public class App {
             i++;
         }
         return true;
+    }
+
+    private boolean isPrimeTwo(int nro) {
+        boolean isPrime = (nro != 0) && (nro != 1);
+        int i = 2;
+        while (i * i <= nro && isPrime) {
+            isPrime = !(nro % i == 0);
+            i++;
+        }
+        return isPrime;
     }
 
     public static void main(String[] args) {

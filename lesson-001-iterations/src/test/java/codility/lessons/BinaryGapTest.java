@@ -8,7 +8,6 @@ import java.util.Random;
 import static junit.framework.Assert.assertEquals;
 
 public class BinaryGapTest {
-    private static final int[][] TEST_NUMBERS = {{0, 0}, {0, 1}, {2, 9}, {4, 264}, {4, 529}, {1, 20}, {0, 15}, {5, 1041}};
     private static final int SPEED_TEST_CASES = 1_000_000;
 
     private BinaryGap app;
@@ -20,9 +19,14 @@ public class BinaryGapTest {
 
     @Test
     public void testSolution1() {
-        for (int i = 0; i < TEST_NUMBERS.length; i++) {
-            assertEquals(TEST_NUMBERS[i][0], app.solution1(TEST_NUMBERS[i][1]));
-        }
+        assertEquals(0, app.solution1(0));
+        assertEquals(0, app.solution1(1));
+        assertEquals(2, app.solution1(9));
+        assertEquals(4, app.solution1(264));
+        assertEquals(4, app.solution1(529));
+        assertEquals(1, app.solution1(20));
+        assertEquals(0, app.solution1(15));
+        assertEquals(5, app.solution1(1041));
         // Speed test
         Random rnd = new Random();
         for (int i = 0; i < SPEED_TEST_CASES; i++) {
@@ -32,9 +36,14 @@ public class BinaryGapTest {
 
     @Test
     public void testSolution2() {
-        for (int i = 0; i < TEST_NUMBERS.length; i++) {
-            assertEquals(TEST_NUMBERS[i][0], app.solution2(TEST_NUMBERS[i][1]));
-        }
+        assertEquals(0, app.solution2(0));
+        assertEquals(0, app.solution2(1));
+        assertEquals(2, app.solution2(9));
+        assertEquals(4, app.solution2(264));
+        assertEquals(4, app.solution2(529));
+        assertEquals(1, app.solution2(20));
+        assertEquals(0, app.solution2(15));
+        assertEquals(5, app.solution2(1041));
         // Speed test
         Random rnd = new Random();
         for (int i = 0; i < SPEED_TEST_CASES; i++) {

@@ -1,3 +1,4 @@
+https://codility.com/demo/results/trainingGZFRV4-WZM/
 https://codility.com/programmers/lessons/3-time_complexity/tape_equilibrium/
 
 A non-empty zero-indexed array A consisting of N integers is given. Array A represents numbers on a tape.

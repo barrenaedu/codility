@@ -2,6 +2,9 @@ package codility.lessons;
 
 public class TapeEquilibrium {
 
+    /**
+     * Codeada por mi
+     */
     public int solution1(int[] arr) {
         int min = Integer.MAX_VALUE;
         int[] sLow = new int[arr.length - 1];
@@ -22,23 +25,22 @@ public class TapeEquilibrium {
         return min;
     }
 
+    /**
+     * Bajada de internet
+     */
     public int solution2(int[] arr) {
-        int sum = 0;
+        int sumRight = 0;
         for (int i = 0; i < arr.length; i++) {
-            sum += arr[i];
+            sumRight += arr[i];
         }
-        int min = Integer.MAX_VALUE;
-        int subsum = 0;
-        int sumdiff = 0;
+        int minDiff = Integer.MAX_VALUE;
+        int sumLeft = 0;
         for (int i = 0; i < arr.length - 1; i++) {
-            subsum += arr[i];
-            sum -= arr[i];
-            sumdiff = Math.abs(subsum - sum);
-            if (sumdiff < min) {
-                min = sumdiff;
-            }
+            sumLeft += arr[i];
+            sumRight -= arr[i];
+            minDiff = Math.min(minDiff, Math.abs(sumLeft - sumRight));
         }
-        return min;
+        return minDiff;
     }
 
 }

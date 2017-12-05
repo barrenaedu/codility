@@ -38,4 +38,12 @@ public class OddOccurrencesInArray {
         return single;
     }
 
+    public int solution4(int[] arr) {
+        int single = 0;
+        for (int i = 0; i < arr.length; i++) {
+            single = single ^ arr[i];
+        }
+        return single;
+    }
+
 }

@@ -38,8 +38,7 @@ public class PermMissingElem {
 
     public int solution2(int[] arr) {
         int sum = arr.length + 1;
-        int i;
-        for (i = 0; i < arr.length; ++i) {
+        for (int i = 0; i < arr.length; i++) {
             sum += (i + 1) - arr[i];
         }
         return sum;

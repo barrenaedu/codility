@@ -36,4 +36,12 @@ public class OddOccurrencesInArrayTest {
         assertEquals(10, app.solution3(TEST_ARRAY2));
         assertEquals(1, app.solution3(TEST_ARRAY3));
     }
+
+    @Test
+    public void testSolution4() {
+        assertEquals(7, app.solution4(TEST_ARRAY1));
+        assertEquals(10, app.solution4(TEST_ARRAY2));
+        assertEquals(1, app.solution4(TEST_ARRAY3));
+    }
+
 }
